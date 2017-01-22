@@ -3,6 +3,7 @@ $border-color: #333;
 @import "_game.scss";
 @import "_main-buttons.scss";
 @import "_controls.scss";
+@import "_error";
 
 body {
     background-image: url('../img/table.jpg');
