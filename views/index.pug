@@ -1,0 +1,54 @@
+extends layout
+
+block content
+    #game.game
+        #button-green.button-main.green
+        audio#c-audio
+            source(src='./audio/c_note.mp3', type='audio/mpeg')
+            source(src='./audio/c_note.ogg', type='audio/ogg')
+            source(src='./audio/c_note.wav', type='audio/wav')
+        #button-red.button-main.red
+        audio#e-audio
+            source(src='./audio/e_note.mp3', type='audio/mpeg')
+            source(src='./audio/e_note.ogg', type='audio/ogg')
+            source(src='./audio/e_note.wav', type='audio/wav')
+        #button-yellow.button-main.yellow
+        audio#g-audio
+            source(src='./audio/g_note.mp3', type='audio/mpeg')
+            source(src='./audio/g_note.ogg', type='audio/ogg')
+            source(src='./audio/g_note.wav', type='audio/wav')
+        #button-blue.button-main.blue
+        audio#a-audio
+            source(src='./audio/a_note.mp3', type='audio/mpeg')
+            source(src='./audio/a_note.ogg', type='audio/ogg')
+            source(src='./audio/a_note.wav', type='audio/wav')
+        audio#buzzer
+            source(src='./audio/buzzer.mp3', type='audio/mpeg')
+            source(src='./audio/buzzer.ogg', type='audio/ogg')
+            source(src='./audio/buzzer.wav', type='audio/wav')
+        #controls.game-controls
+            h1.game-controls-title Simon
+            .game-controls-group.count
+                #count-display.count-display &nbsp;&nbsp;
+                label.game-controls-label.count-label(for='count-button') count
+            .game-controls-group.start
+                button#start-button.game-controls-push-button.start-button
+                label.game-controls-label.start-label(for='start-button') start
+            .game-controls-group.strict
+                button#strict-button.game-controls-push-button.strict-button
+                label.game-controls-label.strict-label(for='strict-button') strict
+            .game-controls-group.on-off
+                label.game-controls-label.off-label off
+                .on-off-well
+                    span#on-off-button.on-off-button
+                label.game-controls-label.on-label on
+    footer.footer
+        .footer-buttons
+            a(target='_blank', rel='noopener', href='https://github.com/BrentonCozby/simon-game-fcc')
+                button.footer-buttons-code
+                    i.fa.fa-github(aria-hidden='true')
+                    |  View Code
+        p.footer-sentence
+            | Created by 
+            a(target='_blank', rel='noopener', href='https://brentoncozby.com') Brenton Cozby
+            | .
