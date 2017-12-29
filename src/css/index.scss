@@ -1,0 +1,55 @@
+$border-color: #333;
+
+@import "game";
+@import "main-buttons";
+@import "controls";
+@import "error";
+
+body {
+    background-image: url('../images/table.jpg');
+    background-size: cover;
+    height: calc(100vh - 95px);
+    min-height: 420px;
+    @media all and (min-width: 768px) {
+        min-height: 720px;
+    }
+}
+
+.footer {
+    background-color: #333;
+    height: 95px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    &-buttons {
+        text-align: center;
+        padding-top: 15px;
+        margin-bottom: 20px;
+
+        a,
+        a:visited {
+            color: #222;
+        }
+
+        &-code {
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    }
+
+    &-sentence {
+        text-align: center;
+        margin-bottom: 0;
+        color: #eee;
+        font-size: 12px;
+
+        a,
+        a:visited {
+            color: lightblue;
+        }
+    }
+}

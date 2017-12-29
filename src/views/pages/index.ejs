@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<%- include(`${partials}/head`, {pageTitle: 'Home'}); -%>
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header role="banner">
+        <nav role="navigation"></nav>
+    </header>
+
+    <main role="main">
+        <div id="game" class="game">
+            <div id="button-green" class="button-main green"></div>
+            <audio id="c-audio">
+                <source src="audio/c_note.mp3" type="audio/mpeg" />
+                <source src="audio/c_note.ogg" type="audio/ogg" />
+                <source src="audio/c_note.wav" type="audio/wav" />
+            </audio>
+            <div id="button-red" class="button-main red"></div>
+            <audio id="e-audio">
+                <source src="audio/e_note.mp3" type="audio/mpeg" />
+                <source src="audio/e_note.ogg" type="audio/ogg" />
+                <source src="audio/e_note.wav" type="audio/wav" />
+            </audio>
+            <div id="button-yellow" class="button-main yellow"></div>
+            <audio id="g-audio">
+                <source src="audio/g_note.mp3" type="audio/mpeg" />
+                <source src="audio/g_note.ogg" type="audio/ogg" />
+                <source src="audio/g_note.wav" type="audio/wav" />
+            </audio>
+            <div id="button-blue" class="button-main blue"></div>
+            <audio id="a-audio">
+                <source src="audio/a_note.mp3" type="audio/mpeg" />
+                <source src="audio/a_note.ogg" type="audio/ogg" />
+                <source src="audio/a_note.wav" type="audio/wav" />
+            </audio>
+            <audio id="buzzer">
+                <source src="audio/buzzer.mp3" type="audio/mpeg" />
+                <source src="audio/buzzer.ogg" type="audio/ogg" />
+                <source src="audio/buzzer.wav" type="audio/wav" />
+            </audio>
+            <div id="controls" class="game-controls">
+                <h1 class="game-controls-title">Simon</h1>
+                <div class="game-controls-group count">
+                    <div id="count-display" class="count-display">&nbsp;&nbsp;</div>
+                    <label for="count-button" class="game-controls-label count-label">count</label>
+                </div>
+                <div class="game-controls-group start">
+                    <button id="start-button" class="game-controls-push-button start-button"></button>
+                    <label for="start-button" class="game-controls-label start-label">start</label>
+                </div>
+                <div class="game-controls-group strict">
+                    <button id="strict-button" class="game-controls-push-button strict-button"></button>
+                    <label for="strict-button" class="game-controls-label strict-label">strict</label>
+                </div>
+                <div class="game-controls-group on-off">
+                    <label class="game-controls-label off-label">off</label>
+                    <div class="on-off-well">
+                        <span id="on-off-button" class="on-off-button"></span>
+                    </div>
+                    <label class="game-controls-label on-label">on</label>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include(`${partials}/footer`); -%>
+    <%- include(`${partials}/scripts`); -%>
+</body>
+</html>
