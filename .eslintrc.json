@@ -35,7 +35,9 @@
             "never"
         ],
         "no-fallthrough": "off",
-        "arrow-parens": "off"
+        "arrow-parens": "off",
+        "consistent-return": "off",
+        "no-mixed-operators": "off"
     },
     "globals": {
         "NODE_ENV": false,
